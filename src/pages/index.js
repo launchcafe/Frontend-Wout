@@ -1,16 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
+import Navigation from "./Components/js/navigation.js";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export default function Home() {
   return (
@@ -23,8 +13,9 @@ export default function Home() {
         <link rel="preconnect" href="https://stijndv.com" />
         <link rel="stylesheet" href="https://stijndv.com/fonts/Eudoxus-Sans.css" />
       </Head>
+      <Navigation/>
         <main>
-         <h1>Wout Van Laecke</h1>
+        
         </main>
         <footer>
          

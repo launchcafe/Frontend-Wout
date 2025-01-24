@@ -2,11 +2,13 @@
   --background: #06151C;
   --font-color: #FFFFFF;
   --primary-color: #1536FF;
+  --background-second: #081D27;
 }
 
 html,
 body {
   max-width: 100vw;
+  height: 100vh;
 }
 
 body {
@@ -15,7 +17,6 @@ body {
   font-family: 'Eudoxus Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 2rem;
 }
 
 * {
@@ -24,8 +25,20 @@ body {
   margin: 0;
 }
 
-a {
+button {
   color: inherit;
   text-decoration: none;
+  background-color: #1536FF;
+  padding:0.5rem 0.8rem 0.5rem 0.8rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  border: none;
+  font-family: 'Eudoxus Sans', sans-serif;
+  font-size: 14px;
 }
 
+@media (min-width: 768px) {
+  body {
+    margin: 2rem;
+  }
+}
