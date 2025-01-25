@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Navigation from "./Components/js/navigation.js";
+import Header from "./Components/js/header.js"
 
 
 export default function Home() {
@@ -13,9 +14,8 @@ export default function Home() {
         <link rel="preconnect" href="https://stijndv.com" />
         <link rel="stylesheet" href="https://stijndv.com/fonts/Eudoxus-Sans.css" />
       </Head>
-      <Navigation/>
+      <Header/>
         <main>
-        
         </main>
         <footer>
          

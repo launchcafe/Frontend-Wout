@@ -1,0 +1,120 @@
+.header {
+    background-image: url('./../../public/bg-small.webp');
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.wout_image {
+    position: relative;
+    z-index: 10;
+    width: 100%; /* Make the image scale with container */
+    max-width: none; /* Remove the max-width restriction */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0;
+    transform: translateY(-25px);
+    object-fit: contain; /* Ensures image aspect ratio is maintained */
+}
+
+.title {
+    margin-bottom: 1rem;
+}
+
+.paragraph {
+    width: 90%;
+    margin-bottom: 1rem;
+}
+
+.button {
+    text-align: left;
+    width: fit-content;
+}
+
+/* Adjust container width for smaller screen sizes */
+@media (min-width: 425px) {
+    .container {
+        width: 25rem; /* Adjust for small devices */
+    }
+}
+
+/* For medium and larger screens, adjust layout */
+@media (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, auto); /* Side by side layout */
+    }
+
+    .title {
+        font-size: 60px;
+        width: 18rem;
+    }
+
+    .header {
+        background-image: url(./../../public/bg-big.webp); /* Larger background */
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        height: auto;
+        margin-right: 0;
+        margin-top: -2rem;
+    }
+
+    .text_container {
+        grid-column: 1;
+        grid-row: 1;
+        margin-top: 7rem;
+        width: fit-content;
+    }
+
+    .image_wrapper {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .picture {
+        display: block;
+        height: fit-content; 
+    }
+
+    .wout_image {
+       display: block;
+        width: 45vw; /* Make the image larger on large screens */
+        height: auto; /* Keep the aspect ratio */
+        object-fit: contain; /* Maintain aspect ratio */
+        transform: translateY(0px);
+        max-width: 40rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+      width: 95%;
+      max-width: 1600px;
+      gap: 20rem;
+    }
+
+    .text_container {
+        text-align: left;
+    }
+
+    .title {
+        font-size: 90px;
+    }
+
+    .paragraph {
+        font-size: 22px;
+        line-height: 3rem;
+    }
+}

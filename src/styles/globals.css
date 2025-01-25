@@ -38,7 +38,5 @@ button {
 }
 
 @media (min-width: 768px) {
-  body {
-    margin: 2rem;
-  }
+
 }
