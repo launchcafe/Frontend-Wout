@@ -2,6 +2,7 @@ import Head from "next/head";
 import Navigation from "./Components/js/navigation.js";
 import Header from "./Components/js/header.js";
 import Palmares from "./Components/js/palmares.js";
+import styles from './../styles/home.module.css'
 
 export default function Home() {
   return (
@@ -16,8 +17,27 @@ export default function Home() {
       </Head>
       <Header/>
         <main>
-          <section>
+          <section className={styles.section}>
             <Palmares/>
+            <div className={styles.section_text}>
+            <h2>
+            Van voetballer tot schermer
+            </h2>
+            <p>
+            Wout Van Laecke is geboren in Gent op 30/3/2009. Hij startte met schermen op een leeftijd van 7j in de oudste schermclub ter wereld, de Sint-Michielsgilde Gent.
+            </p>
+            <p>
+            Tot zijn 13e combineerde hij voetbal met schermen. Het was eerst zijn droom om bij Anderlecht te spelen en Rode duivel te worden maar op zijn 14e droomde hij meer en meer van een topcarrière als schermer om een echte schermkampioen te worden. Ondertussen focust hij zich 100% op zijn schermen.
+            </p>
+            <article className={styles.article}>
+             <h3>
+             Tot één van de beste schermers van Europa
+             </h3>
+             <p>
+             Na heel hard trainen is Wout ondertussen één van de beste schermers van Europa geworden in zijn leeftijdscategorie. Op een leeftijd van 15j staat hij momenteel 7e op de Europese ranking van de U17 en als nr. 1 van zijn geboortejaar! Wout is één van de uitzonderingen in de voorbije decennia in België om op zo een jonge leeftijd al zo een prestaties neer te zetten in de schermsport, één van de oudste Olympische sporten.
+            </p>
+            </article>
+            </div>
           </section>
         </main>
         <footer>

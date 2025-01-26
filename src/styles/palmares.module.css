@@ -5,6 +5,7 @@
     flex-direction: column;
     gap: 2rem;
     text-align: center;
+    height: fit-content;
 }
 
 .list_item {
@@ -49,6 +50,8 @@
 @media (min-width: 1024px) {
     .container {
         margin-top: -10vh;
+        width: 30vw;
+        padding: 4rem;
     }
 }
 
