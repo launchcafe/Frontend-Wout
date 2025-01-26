@@ -38,6 +38,10 @@
     width: fit-content;
 }
 
+.text_container {
+    padding-bottom: 2rem;
+}
+
 /* Adjust container width for smaller screen sizes */
 @media (min-width: 425px) {
     .container {
@@ -66,7 +70,7 @@
         max-width: 1200px;
         height: auto;
         margin-right: 0;
-        margin-top: -2rem;
+        margin-top: -5rem;
     }
 
     .text_container {
@@ -90,9 +94,9 @@
 
     .wout_image {
        display: block;
-        width: 45vw; /* Make the image larger on large screens */
-        height: auto; /* Keep the aspect ratio */
-        object-fit: contain; /* Maintain aspect ratio */
+        width: 45vw; 
+        height: auto; 
+        object-fit: contain; 
         transform: translateY(0px);
         max-width: 40rem;
     }
@@ -102,19 +106,24 @@
     .container {
       width: 95%;
       max-width: 1600px;
-      gap: 20rem;
+      gap: 10vw;
+     
     }
 
     .text_container {
         text-align: left;
+        margin-top: 10rem;
     }
 
     .title {
+        width: 80%;
         font-size: 90px;
     }
 
     .paragraph {
         font-size: 22px;
-        line-height: 3rem;
+        line-height: 2.5rem;
+        width: 30rem;
+        margin-bottom: 2rem;
     }
 }
