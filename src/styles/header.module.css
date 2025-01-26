@@ -66,10 +66,10 @@
     }
 
     .container {
-        width: 90%;
+        width: 80%;
         max-width: 1200px;
         height: auto;
-        margin-right: 0;
+        
         margin-top: -5rem;
     }
 
@@ -104,10 +104,8 @@
 
 @media (min-width: 1024px) {
     .container {
-      width: 95%;
+      width: 80%;
       max-width: 1600px;
-      gap: 10vw;
-     
     }
 
     .text_container {

@@ -3,6 +3,7 @@
   --font-color: #FFFFFF;
   --primary-color: #1536FF;
   --background-second: #081D27;
+  --gold: #D5AF24;
 }
 
 html,
@@ -44,5 +45,10 @@ button {
 button {
   font-size: 20px;
   padding: 0.7rem 1rem 0.7rem 1rem;
+}
+
+main {
+  width: 80%;
+  margin: 0 auto;
 }
 }

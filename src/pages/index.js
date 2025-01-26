@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Navigation from "./Components/js/navigation.js";
-import Header from "./Components/js/header.js"
-
+import Header from "./Components/js/header.js";
+import Palmares from "./Components/js/palmares.js";
 
 export default function Home() {
   return (
@@ -16,6 +16,9 @@ export default function Home() {
       </Head>
       <Header/>
         <main>
+          <section>
+            <Palmares/>
+          </section>
         </main>
         <footer>
          
