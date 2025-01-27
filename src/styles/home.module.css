@@ -5,13 +5,49 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    line-height: 2rem;
 }
 
 .article {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+.section2 {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.section_container {
+    background-image: url('/public/bg2-small.webp');
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.section2_text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.picture {
+    width: 100%;
+}
+
+.images {
+    width: 100%;
+    border-radius: 2rem;
+    max-width: 25rem;
 }
 
 
@@ -21,7 +57,31 @@
     display: flex;
     flex-direction: row;
     gap: 3rem;
+        width: 80vw;
+        margin: 0 auto;
+    padding-bottom: 5rem;
+    
 }
+
+.section2 {
+    flex-direction: row;
+    gap: 15vw;
+    width: 80vw;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+}
+
+.section_container {
+    background-image: url('../../public/bg2-big.webp');
+}
+
+.section2_text {
+    width: 25rem;
+}
+.picture {
+    width: fit-content;
+}
+
 }
 
 @media (min-width: 1024px) {

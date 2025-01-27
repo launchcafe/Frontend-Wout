@@ -39,6 +39,37 @@ export default function Home() {
             </article>
             </div>
           </section>
+          <div className={styles.section_container}>
+          <section className={styles.section2}>
+            <div className={styles.section2_text}>
+            <h2>
+              Zo vader zo zoon
+            </h2>
+            <p>
+            Wout heeft ongetwijfeld schermgenen met de paplepel meegekregen. Zijn vader en trainer Yoeri was ooit in 2004 nr. 4 op de wereldranking. 
+            </p>
+            <p>
+            Zijn opa Marcel en neven Yves en Gregory werden allen Belgisch kampioen.
+            </p>
+            </div>
+            <picture className={styles.picture}>
+                <source
+                    media="(max-width: 768px)"
+                    srcSet="/father-son_small.webp"
+                />
+                <source
+                    media="(min-width: 769px)"
+                    srcSet="/father-son.webp"
+                    sizes="80vw"
+                />
+                <img
+                    className={styles.images}
+                    src="/father-son_small.webp" 
+                    alt="Picture of Wout Van Laecke"
+                />
+            </picture>
+          </section>
+          </div>
         </main>
         <footer>
          

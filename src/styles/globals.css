@@ -41,14 +41,14 @@ button {
   cursor: pointer;
 }
 
+p {
+  line-height: 2rem;
+}
+
 @media (min-width: 768px) {
 button {
   font-size: 20px;
   padding: 0.7rem 1rem 0.7rem 1rem;
 }
 
-main {
-  width: 80%;
-  margin: 0 auto;
-}
 }
