@@ -1,35 +1,65 @@
-.imagescarousel {
-    position: relative;
-    height: 233px;
-    margin-bottom: 30px;
-    display: flex;
-    width: 100%; /* Ensure the container spans the required width */
-    overflow: hidden; /* Clip overflowing content */
+.tag_list {
+    margin:0;
+    padding-inline:0;
+    list-style:none;
 }
 
-.imagecarousel {
+.scroller {
+    width:80vw;
+    margin: 0 auto;
+}
+
+.scroller__inner {
+    padding-block:2rem;
     display: flex;
-    animation: bannermove 50s linear infinite; /* Apply animation */
-    width: calc(200%); /* Double the content width for smooth animation */
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.scroller[data-animated=true] {
+    overflow: hidden;
+ /* Apply the mask */
+ -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+
 }
 
 .img {
-    margin: 0;
+    width: 25rem;
     border-radius: 2rem;
-    margin-right: 4rem;
 }
 
-@keyframes bannermove {
-    0% {
-        transform: translateX(0);
+.scroller[data-animated=true] .scroller__inner {
+   width: fit-content;
+    flex-wrap: nowrap;
+   animation: scroll 40s linear infinite;
+}
+
+.scroller:hover .scroller__inner {
+    animation-play-state: paused;
+  }
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 2.5rem));
     }
-    100% {
-        transform: translateX(-50%);
-    }
+    
 }
 
 @media (max-width: 768px) {
-    .imagescarousel {
+    .scroller {
         display: none;
     }
 }
