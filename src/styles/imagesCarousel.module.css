@@ -1,0 +1,29 @@
+.imagescarousel {
+    position: relative;
+    height: 233px;
+    margin-bottom: 30px;
+    display: flex;
+    width: 100%; /* Ensure the container spans the required width */
+    overflow: hidden; /* Clip overflowing content */
+}
+
+.imagecarousel {
+    display: flex;
+    animation: bannermove 50s linear infinite; /* Apply animation */
+    width: calc(200%); /* Double the content width for smooth animation */
+}
+
+.img {
+    margin: 0;
+    border-radius: 2rem;
+    margin-right: 4rem;
+}
+
+@keyframes bannermove {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}

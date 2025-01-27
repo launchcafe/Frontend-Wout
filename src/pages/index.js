@@ -2,7 +2,8 @@ import Head from "next/head";
 import Navigation from "./Components/js/navigation.js";
 import Header from "./Components/js/header.js";
 import Palmares from "./Components/js/palmares.js";
-import styles from './../styles/home.module.css'
+import styles from './../styles/home.module.css';
+import ImagesCarousel from "./Components/js/imagesCarousel.js";
 
 export default function Home() {
   return (
@@ -69,6 +70,7 @@ export default function Home() {
                 />
             </picture>
           </section>
+          <ImagesCarousel/>
           </div>
         </main>
         <footer>
