@@ -5,6 +5,7 @@ import Palmares from "./Components/js/palmares.js";
 import styles from './../styles/home.module.css';
 import ImagesCarousel from "./Components/js/imagesCarousel.js";
 import Form from "./Components/form.js";
+import Footer from "./Components/js/footer.js";
 
 export default function Home() {
   return (
@@ -73,10 +74,13 @@ export default function Home() {
           </section>
           <ImagesCarousel/>
           <Form/>
+
+          <Footer/>
           </div>
+
         </main>
         <footer>
-         
+
         </footer>
     </>
   );
