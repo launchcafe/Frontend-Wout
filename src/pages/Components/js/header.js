@@ -30,7 +30,7 @@ export default function Header() {
                     Wout Van Laecke
                 </h1>
                 <p className={styles.paragraph}>
-                    Bouw jij mee aan de weg  naar succes in Rio 2016 voor de Wereldkampioenschappen U17 en U20? Klik dan op de onderstaande knop
+                    Bouw jij mee aan de weg  naar succes in Rio 2026 voor de Wereldkampioenschappen U17 en U20? Klik dan op de onderstaande knop.
                 </p>
                 <button className={styles.button} href="#">
                     Contacteer
