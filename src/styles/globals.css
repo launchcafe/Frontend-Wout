@@ -12,6 +12,7 @@ body {
   height: 100vh;
 }
 
+
 body {
   color: var(--font-color);
   background: var(--background);
@@ -41,9 +42,19 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: var(--background);
+  color: var(--primary-color);
+}
+
 p {
   line-height: 2rem;
 }
+
+.fade-in {
+  opacity: 1;
+}
+
 
 @media (min-width: 768px) {
 button {

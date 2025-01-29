@@ -6,8 +6,38 @@ import styles from './../styles/home.module.css';
 import ImagesCarousel from "./Components/js/imagesCarousel.js";
 import Form from "./Components/form.js";
 import Footer from "./Components/js/footer.js";
+import { useEffect, useState, useRef } from "react";
 
 export default function Home() {
+
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    if (!sectionRef.current) return; // Ensure ref exists
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        console.log("Observing:", entry); // Debugging output
+        if (entry.isIntersecting) {
+          console.log("Section is now visible! 🎉");
+          setIsVisible(true);
+          observer.disconnect(); // Stop observing after it becomes visible
+        }
+      },
+      { root: null, threshold: 0.3 }
+    );
+
+    observer.observe(sectionRef.current);
+
+    return () => observer.disconnect(); // Cleanup observer on unmount
+  }, []);
+
+
+
+
+
   return (
     <>
       <Head>
@@ -43,7 +73,7 @@ export default function Home() {
             </div>
           </section>
           <div className={styles.section_container}>
-          <section className={styles.section2}>
+          <section ref={sectionRef}  className={`${styles.section2} ${isVisible ? styles["fade-in"] : ""}`}>
             <div className={styles.section2_text}>
             <h2>
               Zo vader zo zoon

@@ -1,14 +1,20 @@
 import styles from '@/styles/header.module.css'
 import Navigation from './navigation'
 import Image from 'next/image'
+import { useEffect, useState } from "react";
 
 export default function Header() { 
+    const [isLoaded, setIsLoaded] = useState(false);
+
+    useEffect(() => {
+      setIsLoaded(true);
+    }, []);
     return(
         <header className={styles.header}>
              <Navigation/>
              <div className={styles.container}>
                 <div className={styles.image_wrapper}>
-             <picture className={styles.picture}>
+             <picture className={`${styles.picture} ${isLoaded ? styles["fade-in"] : ""}`}>
                 <source
                     media="(max-width: 768px)"
                     srcSet="/Wout-small.webp"

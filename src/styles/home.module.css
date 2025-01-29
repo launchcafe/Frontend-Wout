@@ -22,6 +22,14 @@
     padding-top: 2rem;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transform: translateY(20px); 
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .section_container {

@@ -8,7 +8,7 @@ export default function Form() {
                 Word jij Wout’s  sponsor?
                 </h2>
                 <p>
-                Bouw jij mee aan de weg  naar succes in Rio 2016 voor de Wereldkampioenschappen U17 en U20? Vul dan het formulier in.
+                Bouw jij mee aan de weg  naar succes in Rio 2026 voor de Wereldkampioenschappen U17 en U20? Vul dan het formulier in.
                 </p>
             </article>
             <form className={styles.form}>

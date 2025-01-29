@@ -3,6 +3,7 @@
     height: auto;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-top: 1rem;
 }
 
 .container {
@@ -40,6 +41,16 @@
 
 .text_container {
     padding-bottom: 2rem;
+}
+
+.picture {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+    width: 300px;
+}
+
+.fade-in {
+    opacity: 1;
 }
 
 /* Adjust container width for smaller screen sizes */
