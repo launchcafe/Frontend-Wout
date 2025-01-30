@@ -40,6 +40,8 @@
 }
 
 .text_container {
+    opacity: 0;
+    transition: opacity 1s ease-in;
     padding-bottom: 2rem;
 }
 

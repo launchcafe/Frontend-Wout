@@ -13,11 +13,19 @@
     margin-top: 2rem;
 }
 
+.list_item_special {
+    list-style: none;
+    margin-top: 2rem;
+    background-color: #0C2C3B;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
 .item_container {
     display: flex;
     flex-direction: row;
     gap: 2vw;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .gold {
@@ -28,9 +36,26 @@
     width: 2rem;
     height: 2rem;
     line-height: 2rem;
+    flex-shrink: 0;
+}
+
+.bronze {
+    background-color: #7E4F09;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5rem;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    flex-shrink: 0;
 }
 
 .text {
+    text-align: center;
+
+}
+
+.text_tournooi {
     text-align: left;
 }
 
@@ -38,6 +63,12 @@
     background-color: #0C2A39;
     border: none;       
     height: 2px;
+}
+
+.tornooi_article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 @media (min-width: 768px) {
