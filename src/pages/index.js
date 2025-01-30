@@ -50,7 +50,7 @@ export default function Home() {
       </Head>
       <Header/>
         <main>
-          <section className={styles.section}>
+          <section id="about" className={styles.section}>
             <Palmares/>
             <div className={styles.section_text}>
             <h2>
@@ -73,7 +73,7 @@ export default function Home() {
             </div>
           </section>
           <div className={styles.section_container}>
-          <section ref={sectionRef}  className={`${styles.section2} ${isVisible ? styles["fade-in"] : ""}`}>
+          <section id="pictures"  ref={sectionRef}  className={`${styles.section2} ${isVisible ? styles["fade-in"] : ""}`}>
             <div className={styles.section2_text}>
             <h2>
               Zo vader zo zoon
@@ -103,7 +103,7 @@ export default function Home() {
             </picture>
           </section>
           <ImagesCarousel/>
-          <Form/>
+          <Form />
 
           <Footer/>
           </div>

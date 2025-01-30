@@ -1,5 +1,6 @@
 import styles from '@/styles/imagesCarousel.module.css';
 import { useEffect, useState } from "react";
+import photo from '../../../../public/Schermen1.jpg'
 
 export default function ImagesCarousel() {
     const [partners, setPartners] = useState([]);
@@ -34,7 +35,7 @@ export default function ImagesCarousel() {
                         <li key={idx}>
                             <img
                                 className={styles.img}
-                                src="https://images.pexels.com/photos/462162/pexels-photo-462162.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                src="/Schermen1.jpg"
                                 alt=""
                             />
                         </li>

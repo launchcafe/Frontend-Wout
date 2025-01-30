@@ -9,13 +9,13 @@ export default function Navigation() {
                 <a className={styles.nav_link} href="#">WVL</a>
                 </li>
                 <li className={styles.nav_item2}>
-                <a className={styles.nav_link} href="#">Over</a>
+                <a className={styles.nav_link} href="#about">Over</a>
                 </li>
                 <li className={styles.nav_item3}>
-                <a className={styles.nav_link} href="#"> Foto's </a>
+                <a className={styles.nav_link} href="#pictures"> Foto's </a>
                 </li>
                 <li className={styles.nav_item4}>
-                    <a className={styles.nav_link} href="#">Sponsors</a>
+                    <a className={styles.nav_link} href="#sponsors">Sponsors</a>
                 </li>
                 <li className={styles.nav_item5}>
                     <button href="#">

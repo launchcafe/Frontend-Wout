@@ -2,7 +2,7 @@ import styles from '@/styles/form.module.css'
 
 export default function Form() {
     return(
-        <div className={styles.container}>
+        <div id="sponsors" className={styles.container}>
             <article className={styles.article}>
                 <h2>
                 Word jij Wout’s  sponsor?
