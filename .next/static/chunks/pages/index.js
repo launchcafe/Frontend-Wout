@@ -466,7 +466,7 @@ eval(__webpack_require__.ts("module.exports = __webpack_require__(/*! ./dist/sha
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "static/media/bg-big.19b10cc9.webp";
+module.exports = __webpack_require__.p + "static/media/bg-big.c930d4a9.webp";
 
 /***/ }),
 
@@ -488,7 +488,7 @@ module.exports = __webpack_require__.p + "static/media/bg-small.6627a4b4.webp";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-module.exports = __webpack_require__.p + "static/media/bg2-big.3b8856eb.webp";
+module.exports = __webpack_require__.p + "static/media/bg2-big.c3ba45de.webp";
 
 /***/ }),
 
