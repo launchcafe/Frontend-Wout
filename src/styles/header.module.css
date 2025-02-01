@@ -8,9 +8,11 @@
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     width: 80%;
     margin: 0 auto;
+    height: 80vh;
+    padding: 1rem;
 }
 
 .wout_image {
@@ -46,12 +48,19 @@
 
 .picture {
     opacity: 0;
+    display: none;
     transition: opacity 1s ease-in;
     width: 300px;
 }
 
 .fade-in {
     opacity: 1;
+}
+
+.text_container {
+    background-color: var(--background-second);
+    padding: 2rem;
+    border-radius: 2rem;
 }
 
 /* Adjust container width for smaller screen sizes */
@@ -90,6 +99,8 @@
     }
 
     .text_container {
+        background-color: transparent;
+        padding: 0;
         grid-column: 1;
         grid-row: 1;
         margin-top: 7rem;
@@ -102,6 +113,7 @@
     }
 
     .picture {
+        display: inline;
         height: fit-content; 
     }
 
