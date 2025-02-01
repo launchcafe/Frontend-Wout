@@ -1,0 +1,30 @@
+.tornooi_article {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.text_tournooi {
+    text-align: left;
+}
+
+.list_item {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.item_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.text {
+   text-align: left;
+}
+
+.date {
+    text-align: right;
+    width: fit-content;
+}

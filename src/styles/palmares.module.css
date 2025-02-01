@@ -66,20 +66,10 @@
 
 }
 
-.text_tournooi {
-    text-align: left;
-}
-
 .line {
     background-color: #0C2A39;
     border: none;       
     height: 2px;
-}
-
-.tornooi_article {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 @media (min-width: 768px) {
