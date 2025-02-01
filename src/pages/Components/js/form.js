@@ -4,7 +4,7 @@ export default function Form() {
     return(
         <div id="sponsors" className={styles.container}>
             <article className={styles.article}>
-                <h2>
+                <h2 className={styles.title}>
                 Word jij Wout’s  sponsor?
                 </h2>
                 <p>

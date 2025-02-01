@@ -64,13 +64,16 @@
 /* For medium and larger screens, adjust layout */
 @media (min-width: 768px) {
     .container {
-        display: grid;
-        grid-template-columns: repeat(2, auto); /* Side by side layout */
+        max-width: 1800px;
+        height: auto;
+        flex-direction: row-reverse;
+        width: 90vw;
+        margin: 0 auto;
+        justify-content: space-between;
     }
 
     .title {
         font-size: 60px;
-        width: 18rem;
     }
 
     .header {
@@ -80,7 +83,7 @@
 
     .container {
         width: 80%;
-        max-width: 1200px;
+        max-width: 1600px;
         height: auto;
         
         margin-top: -5rem;
@@ -96,12 +99,9 @@
     .image_wrapper {
         position: relative;
         z-index: 10;
-        width: 100%;
-        max-width: 100%;
     }
 
     .picture {
-        display: block;
         height: fit-content; 
     }
 
@@ -116,10 +116,6 @@
 }
 
 @media (min-width: 1024px) {
-    .container {
-      width: 80%;
-      max-width: 1600px;
-    }
 
     .text_container {
         text-align: left;
@@ -127,7 +123,6 @@
     }
 
     .title {
-        width: 80%;
         font-size: 90px;
     }
 
