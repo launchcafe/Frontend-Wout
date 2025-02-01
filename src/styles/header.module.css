@@ -3,7 +3,6 @@
     height: auto;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 1rem;
 }
 
 .container {
@@ -75,7 +74,8 @@
     }
 
     .header {
-        background-image: url(./../../public/bg-big.webp); /* Larger background */
+        background-image: url(./../../public/bg-big.webp); /* Larger background */ 
+        padding-top: 1rem;
     }
 
     .container {

@@ -33,7 +33,7 @@
 }
 
 .section_container {
-    background-image: url('/public/bg2-small.webp');
+    background-image: url('../../public/bg2-small.webp');
     height: auto;
     background-repeat: no-repeat;
     background-size: cover;
