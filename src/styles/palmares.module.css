@@ -28,7 +28,7 @@
     justify-content: space-between;
 }
 
-.gold {
+.first {
     background-color: var(--gold);
     text-align: center;
     font-weight: bold;
@@ -39,7 +39,18 @@
     flex-shrink: 0;
 }
 
-.bronze {
+.second {
+    background-color: #959595;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5rem;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    flex-shrink: 0;
+}
+
+.third {
     background-color: #7E4F09;
     text-align: center;
     font-weight: bold;

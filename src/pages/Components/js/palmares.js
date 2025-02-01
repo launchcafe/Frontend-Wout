@@ -1,9 +1,15 @@
 import styles from '@/styles/palmares.module.css'
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import useFetch from '@/pages/api/strapi/fetch';
+import classNames from 'classnames';
 
 export default function Palmares() {
     const [isOpen, setIsOpen] = useState(false);
+
+    const {data: palmares, loading, error} = useFetch("http://127.0.0.1:1337/api/palmares?sort=Date:desc");
+    if (loading) return <p>Loading...</p>;
+    if (!palmares || palmares.length === 0) return <p>No data found.</p>;
 
 
     return (
@@ -13,186 +19,33 @@ export default function Palmares() {
                     Palmares
                 </h3>
                 <ul>
-                <li className={styles.list_item_special}>
-                        <div className={styles.item_container}>
-                            <p>
-                                7
-                            </p>
-                            <p className={styles.text}>
-                            Europese Rangking U17
-                            </p>
-                            <p>
-                            Jan 2025
-                            </p>
-                        </div>
-                    </li>
-                    <li className={styles.list_item}>
-                        <div className={styles.item_container}>
-                            <p className={styles.gold}>
-                                1
-                            </p>
-                            <p className={styles.text}>
-                            Nationaal Circuit Frankrijk U17
+                    {palmares.map((item)=> {
+                            // Extract year from Date
+                             const year = new Date(item.Date).getFullYear();
+
+                             // Conditionally set class name based on Ranking
+                             const rankingClass = classNames({
+                                [styles.first]: item.Ranking === 1,
+                                [styles.second]: item.Ranking === 2,
+                                [styles.third]: item.Ranking === 3,
+                              });
+
+                            return(
+
+                        <li className={item.Highlighted ? styles.list_item_special : styles.list_item} key={item.id}>
+                              <div className={styles.item_container}>
+                            <p className={rankingClass}>{item.Ranking}</p>
+                             <p className={styles.text}>
+                            {item.Competition}
                             </p>
                             <p>
-                            2024
+                            {year}
                             </p>
-                        </div>
-                    </li>
-                    <li className={styles.list_item}>
-                        <div className={styles.item_container}>
-                            <p className={styles.gold}>
-                                1
-                            </p>
-                            <p className={styles.text}>
-                            Challenge Maître Marcel Van Laecke U17
-                            </p>
-                            <p>
-                            2024
-                            </p>
-                        </div>
-                    </li>
-                    <li className={styles.list_item}>
-                        <div className={styles.item_container}>
-                            <p className={styles.gold}>
-                                1
-                            </p>
-                            <p className={styles.text}>
-                            Nationaal circuit U17 te Gent
-                            </p>
-                            <p>
-                            2024
-                            </p>
-                        </div>
-                    </li>
-                    <li className={styles.list_item}>
-                        <div className={styles.item_container}>
-                            <p className={styles.gold}>
-                                1
-                            </p>
-                            <p className={styles.text}>
-                            Nationaal circuit U17 Waterloo
-                            </p>
-                            <p>
-                            2024
-                            </p>
-                        </div>
-                    </li>
-                    <li className={styles.list_item}>
-                        <div className={styles.item_container}>
-                            <p className={styles.gold}>
-                                1
-                            </p>
-                            <p className={styles.text}>
-                            Reutlingen Cup
-                            </p>
-                            <p>
-                            2024
-                            </p>
-                        </div>
-                    </li>
-                    <li className={styles.list_item}>
-                        <div className={styles.item_container}>
-                            <p className={styles.gold}>
-                                1
-                            </p>
-                            <p className={styles.text}>
-                            BK U13 degen
-                            </p>
-                            <p>
-                            2024
-                            </p>
-                        </div>
-                    </li>
-                    <li className={styles.list_item}>
-                        <div className={styles.item_container}>
-                            <p>
-                                7
-                            </p>
-                            <p className={styles.text}>
-                            Grenoble
-                            </p>
-                            <p>
-                            2024
-                            </p>
-                        </div>
-                    </li>
-                    <li className={styles.list_item}>
-                        <div className={styles.item_container}>
-                            <p className={styles.bronze}>
-                                3
-                            </p>
-                            <p className={styles.text}>
-                            Klagenfurt
-                            </p>
-                            <p>
-                            2024
-                            </p>
-                        </div>
-                    </li>
-                    <li className={styles.list_item}>
-                        <div className={styles.item_container}>
-                            <p>
-                                11
-                            </p>
-                            <p className={styles.text}>
-                            Kopenhagen
-                            </p>
-                            <p>
-                            2024
-                            </p>
-                        </div>
-                    </li>
-                    <li className={styles.list_item}>
-                        <div className={styles.item_container}>
-                            <p className={styles.gold}>
-                                1
-                            </p>
-                            <p className={styles.text}>
-                            BK U13 degen
-                            </p>
-                            <p>
-                            2023
-                            </p>
-                        </div>
-                    </li>
-                    <li className={styles.list_item}>
-                        <div className={styles.item_container}>
-                            <p className={styles.gold}>
-                                1
-                            </p>
-                            <p className={styles.text}>
-                            BK U13 degen
-                            </p>
-                            <p>
-                            2023
-                            </p>
-                        </div>
-                    </li>
-                    <li className={styles.list_item}>
-                        <div className={styles.item_container}>
-                            <p className={styles.gold}>
-                                1
-                            </p>
-                            <p className={styles.text}>
-                            Dutch Open U17 te Oss
-                            </p>
-                            <p>
-                            2022
-                            </p>
-                        </div>
-                    </li>
-                    <li className={styles.list_item}>
-                        <div className={styles.item_container}>
-                            <p className={styles.gold}>
-                                1
-                            </p>
-                            <p className={styles.text}>
-                            Nationaal klassement en in het Belgische selectieklassement U17
-                            </p>
-                        </div>
-                    </li>
+                            </div>
+                        </li>
+                   ) })}
                 </ul>
+               
             </article>
             <hr className={styles.line}/>
             <article onClick={() => setIsOpen(!isOpen)}>
