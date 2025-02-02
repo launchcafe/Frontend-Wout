@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@netlify/plugin-emails": "^1.1.1",
     "@netlify/plugin-nextjs": "^5.9.4",
     "classnames": "^2.5.1",
     "lucide-react": "^0.474.0",
