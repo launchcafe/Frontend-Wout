@@ -1,3 +1,8 @@
+.tag-list {
+    margin:0;
+    padding-inline:0;
+    list-style:none;
+}
 
 .scroller {
     width:80vw;
@@ -5,57 +10,56 @@
 }
 
 .scroller__inner {
-
-    margin:0;
-    padding-inline:0;
-    list-style:none;
     padding-block:2rem;
     display: flex;
     gap: 5rem;
     flex-wrap: wrap;
 }
 
-.scroller[data-animated=true] {
-    overflow: hidden;
- /* Apply the mask */
- -webkit-mask: linear-gradient(
-    90deg,
-    transparent,
-    white 20%,
-    white 80%,
-    transparent
-  );
-  mask: linear-gradient(
-    90deg,
-    transparent,
-    white 20%,
-    white 80%,
-    transparent
-  );
-
+.list {
+    list-style: none;
 }
 
-.slide__image {
-    width: 25rem;
+.slideImage {
     border-radius: 2rem;
 }
 
+.scroller[data-animated=true] {
+  overflow: hidden;
+/* Apply the mask */
+-webkit-mask: linear-gradient(
+  90deg,
+  transparent,
+  white 20%,
+  white 80%,
+  transparent
+);
+mask: linear-gradient(
+  90deg,
+  transparent,
+  white 20%,
+  white 80%,
+  transparent
+);
+
+}
+
 .scroller[data-animated=true] .scroller__inner {
-    width: fit-content;
-     flex-wrap: nowrap;
-    animation: scroll 40s linear infinite;
- }
- 
- .scroller:hover .scroller__inner {
-     animation-play-state: paused;
-   }
- 
- @keyframes scroll {
-     to {
-         transform: translate(calc(-50% - 2.5rem));
-     }
-     
- }
+   width: fit-content;
+    flex-wrap: nowrap;
+   animation: scroll 40s linear infinite;
+}
+
+.scroller:hover .scroller__inner {
+    animation-play-state: paused;
+  }
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 2.5rem));
+    }
+    
+}
 
 @media (max-width: 768px) {
     .scroller {
