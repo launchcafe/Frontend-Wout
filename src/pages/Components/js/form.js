@@ -48,7 +48,6 @@ export default function Form() {
             <input className={styles.input} placeholder="Jouw bedrijf*" type="company" id="company" name="company" size="30" required />
             <input  className={styles.input} placeholder="Jouw telefoonnummer*" type="tel" id="phone" name="phone" required />
             <button  type="submit" value="Verzenden" disabled={status === 'pending'}>Neem contact op</button>
-            </form>
             {status === 'ok' && (
                         <div className="alert alert-success">
                             <SuccessIcon />
@@ -61,6 +60,7 @@ export default function Form() {
                             {error}
                         </div>
                     )}
+            </form>
         </div>
     )
 }
