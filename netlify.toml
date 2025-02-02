@@ -21,6 +21,3 @@
   ## more info on configuring this file: https://ntl.fyi/file-based-build-config
 [[plugins]]
   package = "@netlify/plugin-nextjs" 
-
- [plugins.inputs]
-    port = 80
