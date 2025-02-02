@@ -5,7 +5,7 @@ export default function Button() {
     return (
         <div class="container">
         <button
-      className={styles.button} onClick={() => window.location.href = 'mailto:yves.van.laecke@telenet.be?subject=Hello&body=I%20would%20like%20to%20inquire'}>
+      className={styles.button} onClick={() => window.location.href = 'mailto:yves.van.laecke@telenet.be?subject=Contact%Wout%Van%Laecke'}>
         Contacteer
     </button>
       </div>
