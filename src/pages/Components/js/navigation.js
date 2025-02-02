@@ -18,7 +18,7 @@ export default function Navigation() {
                     <a className={styles.nav_link} href="#sponsors">Sponsors</a>
                 </li>
                 <li className={styles.nav_item5}>
-                    <button href="#">
+                    <button onClick={() => window.location.href = 'mailto:yves.van.laecke@telenet.be?subject=Hello&body=I%20would%20like%20to%20inquire'}>
                     Contacteer
                     </button>
                 </li>
