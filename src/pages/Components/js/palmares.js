@@ -17,7 +17,7 @@ export default function Palmares() {
                 <h3>
                     Palmares
                 </h3>
-                <ul>
+                <ul className={styles.list}>
                     {palmares.map((item)=> {
                             // Extract year from Date
                              const year = new Date(item.Date).getFullYear();

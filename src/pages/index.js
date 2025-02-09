@@ -6,8 +6,11 @@ import ImagesCarousel from "./Components/js/imagesCarousel.js";
 import Form from "./Components/js/form.js";
 import Footer from "./Components/js/footer.js";
 import { useEffect, useState, useRef } from "react";
+import { useMediaQuery } from "react-responsive";
+import SwipeImages from "./Components/js/SwipImages.js";
 
 export default function Home() {
+  const isMobile = useMediaQuery({ maxWidth: 767 });
 
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef(null);
@@ -84,24 +87,21 @@ export default function Home() {
             Zijn opa Marcel en neven Yves en Gregory werden allen Belgisch kampioen.
             </p>
             </div>
-            <picture className={styles.picture}>
-                <source
-                    media="(max-width: 768px)"
-                    srcSet="/father-son_small.webp"
-                />
-                <source
-                    media="(min-width: 769px)"
-                    srcSet="/father-son.webp"
-                    sizes="80vw"
-                />
-                <img
-                    className={styles.images}
-                    src="/father-son_small.webp" 
-                    alt="Picture of Wout Van Laecke"
-                />
-            </picture>
+           { isMobile ? (
+  <div></div>
+) : (
+  <picture className={styles.picture}>
+    <source media="(max-width: 768px)" srcSet="/father-son_small.webp" />
+    <source media="(min-width: 769px)" srcSet="/father-son.webp" sizes="80vw" />
+    <img
+      className={styles.images}
+      src="/father-son_small.webp"
+      alt="Picture of Wout Van Laecke"
+    />
+  </picture>
+)}
           </section>
-          <ImagesCarousel/>
+         {isMobile ? <SwipeImages/> : <ImagesCarousel/> }
           <Form />
 
           <Footer/>

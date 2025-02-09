@@ -1,0 +1,19 @@
+.swiper_container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.swiperSlide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideImage {
+    border-radius: 2rem;
+    width: 80vw;
+}
+
+.swiper_button_prev {
+    color: var(--background-second);
+}

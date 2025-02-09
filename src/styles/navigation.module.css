@@ -2,6 +2,8 @@
     width: 100%;
     background-color: var(--background-second);
     z-index: 5;
+    position: sticky;
+    top: 0;
 }
 
 .nav_list {

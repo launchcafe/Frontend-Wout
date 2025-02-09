@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import styles from '@/styles/imagesCarousel.module.css'
+import styles from '@/styles/imagesCarousel.module.css';
+
+
 
 export default function PartnerList() {
   const [partners, setPartners] = useState([]);
