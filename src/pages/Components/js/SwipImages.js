@@ -35,6 +35,19 @@ export default function SwipeImages() {
         };
       }, [selectedImage]);
 
+      const specialImageTitle = "Wout and Yoeri"; 
+
+      const sortedImages = [...images].sort((a, b) => {
+        if (a.Title === specialImageTitle) {
+          return -1; // Move this image to the front
+        }
+        if (b.Title === specialImageTitle) {
+          return 1; // Move this image to the front
+        }
+        return 0; // Keep the rest in the same order
+      });
+      
+
     return (
       <div className={styles.swiper_container}>
         <Swiper
@@ -43,7 +56,7 @@ export default function SwipeImages() {
           spaceBetween={10}
           slidesPerView={1}
         >
-          {images.map((image) => (
+          {sortedImages.map((image) => (
             <SwiperSlide key={image.id} className={styles.swiperSlide}>
              <img
               className={styles.slideImage} // Using class from the CSS module
