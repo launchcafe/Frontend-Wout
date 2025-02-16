@@ -7,6 +7,7 @@ import styles from '@/styles/swipImages.module.css';
 
 export default function SwipeImages() {
       const [images, setImages] = useState([]);
+      const [selectedImage, setSelectedImage] = useState(null);
 
       useEffect(() => {
         const fetchImages = async () => {
@@ -22,7 +23,17 @@ export default function SwipeImages() {
         fetchImages();
       }, []); // Fetch images only once on component mount
 
-
+      useEffect(() => {
+        if (selectedImage) {
+          document.body.style.overflow = "hidden"; // Disable scrolling
+        } else {
+          document.body.style.overflow = ""; // Enable scrolling again
+        }
+    
+        return () => {
+          document.body.style.overflow = ""; // Cleanup on unmount
+        };
+      }, [selectedImage]);
 
     return (
       <div className={styles.swiper_container}>
@@ -38,10 +49,27 @@ export default function SwipeImages() {
               className={styles.slideImage} // Using class from the CSS module
               src={image.Image[0]?.formats?.small?.url}
               alt={image.Title}
+              onClick={() => setSelectedImage(image.Image[0]?.formats?.small?.url)}
             />
             </SwiperSlide>
           ))}
         </Swiper>
+        {selectedImage && (
+      <div
+        className={styles.modalContainer}
+        onClick={() => setSelectedImage(null)}
+      >
+        <div className={styles.modal}>
+        <button
+        className={styles.modalButton}
+            onClick={() => setSelectedImage(null)}
+          >
+            &times;
+          </button>
+          <img src={selectedImage} alt="Selected" className={styles.modalImage} />
+        </div>
+      </div>
+    )}
       </div>
     );
   }

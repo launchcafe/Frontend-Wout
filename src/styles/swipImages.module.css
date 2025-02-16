@@ -12,8 +12,47 @@
 .slideImage {
     border-radius: 2rem;
     width: 80vw;
+    height: 20rem;
+    object-fit: cover;  
+
 }
 
 .swiper_button_prev {
     color: var(--background-second);
 }
+
+.modalContainer {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999; 
+  }
+
+  .modalContainer div {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  
+  
+  .modal {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+  }
+  
+  .modalImage {
+    border-radius: 2rem;
+    width: 90vw;
+  }
+  
+  .modalButton {
+    width: fit-content;
+    height: fit-content;
+  }
