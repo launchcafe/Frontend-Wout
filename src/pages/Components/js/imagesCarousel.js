@@ -8,6 +8,7 @@ import styles from '@/styles/imagesCarousel.module.css';
 export default function PartnerList() {
   const [partners, setPartners] = useState([]);
   const scrollerRef = useRef(null); 
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     const fetchPartners = async () => {
@@ -44,12 +45,33 @@ export default function PartnerList() {
           const duplicatedItem = item.cloneNode(true);
           duplicatedItem.setAttribute('aria-hidden', true);
           scrollerInner.appendChild(duplicatedItem);
+
+
+          duplicatedItem.addEventListener("click", () => {
+            const imgSrc = duplicatedItem.querySelector("img")?.src;
+            if (imgSrc) setSelectedImage(imgSrc);
+          });
+
         });
       }
     }
   }, [partners]);
 
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow = "hidden"; // Disable scrolling
+    } else {
+      document.body.style.overflow = ""; // Enable scrolling again
+    }
+
+    return () => {
+      document.body.style.overflow = ""; // Cleanup on unmount
+    };
+  }, [selectedImage]);
+
+
   return (
+    <div>
     <div ref={scrollerRef} className={styles.scroller}>
       <ul className={styles.scroller__inner}>
         {partners.map((partner) => (
@@ -58,10 +80,28 @@ export default function PartnerList() {
               className={styles.slideImage} // Using class from the CSS module
               src={partner.Image[0]?.formats?.small?.url}
               alt={partner.Title}
+              onClick={() => setSelectedImage(partner.Image[0]?.formats?.small?.url)}
             />
           </li>
         ))}
       </ul>
     </div>
+     {selectedImage && (
+      <div
+        className={styles.modalContainer}
+        onClick={() => setSelectedImage(null)}
+      >
+        <div className={styles.modal}>
+        <button
+        className={styles.modalButton}
+            onClick={() => setSelectedImage(null)}
+          >
+            &times;
+          </button>
+          <img src={selectedImage} alt="Selected" className={styles.modalImage} />
+        </div>
+      </div>
+    )}
+</div>
   );
 }

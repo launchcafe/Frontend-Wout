@@ -22,6 +22,11 @@
 
 .slideImage {
     border-radius: 2rem;
+    height: 20rem;
+    width: 30rem;
+    object-fit: cover;  
+    object-position: center;
+    cursor: pointer;
 }
 
 .scroller[data-animated=true] {
@@ -47,7 +52,7 @@ mask: linear-gradient(
 .scroller[data-animated=true] .scroller__inner {
    width: fit-content;
     flex-wrap: nowrap;
-   animation: scroll 40s linear infinite;
+   animation: scroll 60s linear infinite;
 }
 
 .scroller:hover .scroller__inner {
@@ -59,4 +64,35 @@ mask: linear-gradient(
         transform: translate(calc(-50% - 2.5rem));
     }
     
+}
+
+
+.modalContainer {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999; 
+}
+
+
+.modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.modalImage {
+  border-radius: 2rem;
+}
+
+.modalButton {
+  width: fit-content;
+  height: fit-content;
 }
