@@ -54,29 +54,16 @@ useEffect(() => {
           <section id="about" className={styles.section}>
             <Palmares/>
             <div className={styles.section_text}>
-            <TextBlock id={Number(4)}/>
+            <TextBlock position={Number(1)}/>
             <article className={styles.article}>
-             <h3>
-             Tot één van de beste schermers van Europa
-             </h3>
-             <p>
-             Na heel hard trainen is Wout ondertussen één van de beste schermers van Europa geworden in zijn leeftijdscategorie. Op een leeftijd van 15j staat hij momenteel 7e op de Europese ranking van de U17 en als nr. 1 van zijn geboortejaar! Wout is één van de uitzonderingen in de voorbije decennia in België om op zo een jonge leeftijd al zo een prestaties neer te zetten in de schermsport, één van de oudste Olympische sporten.
-            </p>
+            <TextBlock position={Number(2)}/>
             </article>
             </div>
           </section>
           <div className={styles.section_container}>
           <section id="pictures"  ref={sectionRef}  className={`${styles.section2} ${isVisible ? styles["fade-in"] : ""}`}>
             <div className={styles.section2_text}>
-            <h2>
-              Zo vader zo zoon
-            </h2>
-            <p>
-            Wout heeft ongetwijfeld schermgenen met de paplepel meegekregen. Zijn vader en trainer Yoeri was ooit in 2004 nr. 4 op de wereldranking. 
-            </p>
-            <p>
-            Zijn opa Marcel en neven Yves en Gregory werden allen Belgisch kampioen.
-            </p>
+            <TextBlock position={Number(3)}/>
             </div>
            { isMobile ? (
   <div></div>
