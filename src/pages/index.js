@@ -8,38 +8,37 @@ import Footer from "./Components/js/footer.js";
 import { useEffect, useState, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import SwipeImages from "./Components/js/SwipImages.js";
+import TextBlock from "./Components/js/text_block.js";
 
 export default function Home() {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
-  const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
+const [isVisible, setIsVisible] = useState(false);
+const sectionRef = useRef(null);
 
-  useEffect(() => {
-    if (!sectionRef.current) return; // Ensure ref exists
+// Intersection Observer Effect
+useEffect(() => {
+  if (!sectionRef.current) return; // Ensure ref exists
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        console.log("Observing:", entry); // Debugging output
-        if (entry.isIntersecting) {
-          console.log("Section is now visible! 🎉");
-          setIsVisible(true);
-          observer.disconnect(); // Stop observing after it becomes visible
-        }
-      },
-      { root: null, threshold: 0.3 }
-    );
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const entry = entries[0];
+      console.log("Observing:", entry); // Debugging output
+      if (entry.isIntersecting) {
+        console.log("Section is now visible! 🎉");
+        setIsVisible(true);
+        observer.disconnect(); // Stop observing after it becomes visible
+      }
+    },
+    { root: null, threshold: 0.3 }
+  );
 
-    observer.observe(sectionRef.current);
+  observer.observe(sectionRef.current);
 
-    return () => observer.disconnect(); // Cleanup observer on unmount
-  }, []);
+  return () => observer.disconnect(); 
+}, []); 
 
-
-
-
-
+  
   return (
     <>
       <Head>
@@ -55,15 +54,7 @@ export default function Home() {
           <section id="about" className={styles.section}>
             <Palmares/>
             <div className={styles.section_text}>
-            <h2>
-            Van voetballer tot schermer
-            </h2>
-            <p>
-            Wout Van Laecke is geboren in Gent op 30/3/2009. Hij startte met schermen op een leeftijd van 7j in de oudste schermclub ter wereld, de Sint-Michielsgilde Gent.
-            </p>
-            <p>
-            Tot zijn 13e combineerde hij voetbal met schermen. Het was eerst zijn droom om bij Anderlecht te spelen en Rode duivel te worden maar op zijn 14e droomde hij meer en meer van een topcarrière als schermer om een echte schermkampioen te worden. Ondertussen focust hij zich 100% op zijn schermen.
-            </p>
+            <TextBlock id={Number(4)}/>
             <article className={styles.article}>
              <h3>
              Tot één van de beste schermers van Europa
