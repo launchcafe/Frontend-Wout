@@ -5,7 +5,7 @@ import Tournaments from './tournaments';
 
 export default function Palmares() {
 
-    const {data: palmares, loading, error} = useFetch("https://strapi-production-f905.up.railway.app/api/palmares?sort=Date:desc");
+    const {data: palmares, loading, error} = useFetch("https://wout-van-laecke.up.railway.app/api/palmares?sort=Date:desc");
     if (loading) return <p>Loading...</p>;
     if (!palmares || palmares.length === 0) return <p>No data found.</p>;
 

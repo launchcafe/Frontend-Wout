@@ -12,7 +12,7 @@ export default function SwipeImages() {
       useEffect(() => {
         const fetchImages = async () => {
           try {
-            const res = await fetch("https://strapi-production-f905.up.railway.app/api/images?populate=*");
+            const res = await fetch("https://wout-van-laecke.up.railway.app/api/images?populate=*");
             const data = await res.json();
             setImages(data.data);
           } catch (error) {

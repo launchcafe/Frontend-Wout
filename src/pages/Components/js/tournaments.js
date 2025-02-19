@@ -6,7 +6,7 @@ import useFetch from '@/pages/api/strapi/fetch';
 export default function Tournaments() {
     const [isOpen, setIsOpen] = useState(false);
 
-        const {data: tournaments, loading, error} = useFetch("https://strapi-production-f905.up.railway.app/api/tournaments");
+        const {data: tournaments, loading, error} = useFetch("https://wout-van-laecke.up.railway.app/api/tournaments");
         if (loading) return <p>Loading...</p>;
         if (!tournaments || tournaments.length === 0) return <p>No data found.</p>;
 

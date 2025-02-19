@@ -13,7 +13,7 @@ export default function PartnerList() {
   useEffect(() => {
     const fetchPartners = async () => {
       try {
-        const res = await fetch("https://strapi-production-f905.up.railway.app/api/images?populate=*");
+        const res = await fetch("https://wout-van-laecke.up.railway.app/api/images?populate=*");
         const data = await res.json();
         setPartners(data.data);
       } catch (error) {

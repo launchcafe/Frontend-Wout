@@ -1,7 +1,7 @@
 import useFetch from '@/pages/api/strapi/fetch';
 
 export default function TextBlock({ position }) {
-  const { data: texts, loading, error } = useFetch("https://strapi-production-f905.up.railway.app/api/texts");
+  const { data: texts, loading, error } = useFetch("https://wout-van-laecke.up.railway.app/api/texts");
   
   if (loading) return <p>Loading...</p>;
   if (!texts || texts.length === 0) return <p>No data found.</p>;
