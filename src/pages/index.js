@@ -70,7 +70,7 @@ useEffect(() => {
 ) : (
   <picture className={styles.picture}>
     <source media="(max-width: 768px)" srcSet="/father-son_small.webp" />
-    <source media="(min-width: 769px)" srcSet="/father-son.webp" sizes="80vw" />
+    <source media="(min-width: 769px)" srcSet="/marcel_wout.jpg" sizes="80vw" />
     <img
       className={styles.images}
       src="/father-son_small.webp"

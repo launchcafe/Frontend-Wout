@@ -1,6 +1,8 @@
 .header {
-    background-image: url('./../../public/bg-small.webp');
+    background-image: url('./../../public/bg-small-paralax.png');
     height: auto;
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -14,6 +16,8 @@
     height: 80vh;
     padding: 1rem;
 }
+
+
 
 .wout_image {
     position: relative;

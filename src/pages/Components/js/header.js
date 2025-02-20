@@ -34,7 +34,7 @@ export default function Header() {
             </div>
             <div className={`${styles.text_container} ${isLoaded ? styles["fade-in"] : ""}`}>
                 <h1 className={styles.title}>
-                    Wout Van Laecke
+                    Wout <br/> Van Laecke
                 </h1>
                 <p className={styles.paragraph}>
                     Bouw jij mee aan de weg  naar succes in Rio 2026 voor de Wereldkampioenschappen U17 en U20? Klik dan op de onderstaande knop.

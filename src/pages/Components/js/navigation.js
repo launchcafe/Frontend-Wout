@@ -9,11 +9,12 @@ export default function Navigation() {
                 <a className={styles.nav_link} href="#">WVL</a>
                 </li>
                 <li className={styles.nav_item2}>
-                <a className={styles.nav_link} href="#about">Over</a>
+                <a className={styles.nav_link} href="#about">Wie is Wout?</a>
                 </li>
                 <li className={styles.nav_item3}>
-                <a className={styles.nav_link} href="#pictures"> Foto's </a>
+                <a className={styles.nav_link} href="#pictures"> Foto gallerij</a>
                 </li>
+                
                 <li className={styles.nav_item4}>
                     <a className={styles.nav_link} href="#sponsors">Sponsors</a>
                 </li>
