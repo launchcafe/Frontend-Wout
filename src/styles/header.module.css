@@ -60,6 +60,7 @@
     transform: translate(-50%, -20%); /* Adjust the position to the center */
     z-index: 1; /* Ensure the text is above the background */
     color: white; /* Optional: Ensure text is visible if the background is dark */
+    margin-bottom: 1rem;
 }
 
 .picture {
@@ -150,6 +151,7 @@
     .text_container {
         text-align: left;
         margin-top: 10rem;
+        margin-bottom: 10rem;
     }
 
     .title {
@@ -160,6 +162,5 @@
         font-size: 22px;
         line-height: 2.5rem;
         width: 30rem;
-        margin-bottom: 2rem;
     }
 }
