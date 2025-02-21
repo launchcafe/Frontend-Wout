@@ -55,7 +55,7 @@
     transition: opacity 1s ease-in;
     padding: 2rem;
     position: absolute; /* Make sure text is positioned within the parallax container */
-    top: 50%; /* Vertically center the text */
+    top: 48%; /* Vertically center the text */
     left: 50%; /* Horizontally center the text */
     transform: translate(-50%, -20%); /* Adjust the position to the center */
     z-index: 1; /* Ensure the text is above the background */
@@ -122,7 +122,7 @@
         grid-row: 1;
         margin-top: 7rem;
         width: fit-content;
-        top: 30%; /* Vertically center the text */
+        top: 20%; /* Vertically center the text */
         left: 25%; /* Horizontally center the text */
     }
 
