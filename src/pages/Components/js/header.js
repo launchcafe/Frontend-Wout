@@ -1,47 +1,78 @@
-import styles from '@/styles/header.module.css'
-import Navigation from './navigation'
-import Image from 'next/image'
-import { useEffect, useState } from "react";
+import styles from '@/styles/header.module.css';
+import Navigation from './navigation';
+import { useState, useEffect } from 'react';
 import Button from './button';
+import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax';
+import { useMediaQuery } from "react-responsive";
 
-export default function Header() { 
-    const [isLoaded, setIsLoaded] = useState(false);
+export default function Header() {
+  const [isLoaded, setIsLoaded] = useState(false);
 
-    useEffect(() => {
-      setIsLoaded(true);
-    }, []);
-    return(
-        <header className={styles.header}>
-             <Navigation/>
-             <div className={styles.container}>
-                <div className={styles.image_wrapper}>
-             <picture className={`${styles.picture} ${isLoaded ? styles["fade-in"] : ""}`}>
-                <source
-                    media="(max-width: 768px)"
-                    srcSet="/Wout-small.webp"
-                />
-                <source
-                    media="(min-width: 769px)"
-                    srcSet="/Wout-big.webp"
-                    sizes="80vw"
-                />
-                <img
-                    className={styles.wout_image}
-                    src="/Wout-small.webp" 
-                    alt="Picture of Wout Van Laecke"
-                />
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
+  return (
+    <ParallaxProvider>
+      <header className={styles.header}>
+        <Navigation />
+       
+        { isMobile ? (
+        <ParallaxBanner
+      layers={[
+        { image: '/bg-small-paralax.png', speed: -20 },
+      ]}
+      className={styles.parallaxbanner}
+    >
+      <div className={`${styles.text_container} ${isLoaded ? styles['fade-in'] : ''}`}>
+            <h1 className={styles.title}>
+              Wout <br />Van Laecke
+            </h1>
+            <p className={styles.paragraph}>
+              Bouw jij mee aan de weg naar succes in Rio 2026 voor de Wereldkampioenschappen U17 en U20? Klik dan op de onderstaande knop.
+            </p>
+            <Button />
+    </div>
+    </ParallaxBanner> ) :(
+    
+    
+        <div className={styles.container}>
+          <div className={styles.image_wrapper}>
+            <picture
+              className={`${styles.picture} ${isLoaded ? styles['fade-in'] : ''}`}
+            >
+              <source
+                media="(max-width: 768px)"
+                srcSet="/Wout-small.webp"
+              />
+              <source
+                media="(min-width: 769px)"
+                srcSet="/Wout-big.webp"
+                sizes="80vw"
+              />
+              <img
+                className={styles.wout_image}
+                src="/Wout-small.webp"
+                alt="Picture of Wout Van Laecke"
+              />
             </picture>
-            </div>
-            <div className={`${styles.text_container} ${isLoaded ? styles["fade-in"] : ""}`}>
-                <h1 className={styles.title}>
-                    Wout <br/> Van Laecke
-                </h1>
-                <p className={styles.paragraph}>
-                    Bouw jij mee aan de weg  naar succes in Rio 2026 voor de Wereldkampioenschappen U17 en U20? Klik dan op de onderstaande knop.
-                </p>
-                <Button/>
-            </div>
-            </div>
-        </header>
-    )
+          </div>
+
+          {/* Text content */}
+          <div className={`${styles.text_container} ${isLoaded ? styles['fade-in'] : ''}`}>
+            <h1 className={styles.title}>
+              Wout <br />Van Laecke
+            </h1>
+            <p className={styles.paragraph}>
+              Bouw jij mee aan de weg naar succes in Rio 2026 voor de Wereldkampioenschappen U17 en U20? Klik dan op de onderstaande knop.
+            </p>
+            <Button />
+          </div>
+        </div>
+    )}
+      </header>
+    </ParallaxProvider>
+  );
 }

@@ -1,11 +1,15 @@
 .header {
-    background-image: url('./../../public/bg-small-paralax.png');
-    height: auto;
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
+
+.parallaxbanner {
+    height: 80vh;
+    position: relative; 
+}
+
 
 .container {
     display: flex;
@@ -45,9 +49,17 @@
 }
 
 .text_container {
+    width: 80vw;
+    z-index: 1;
     opacity: 0;
     transition: opacity 1s ease-in;
-    padding-bottom: 2rem;
+    padding: 2rem;
+    position: absolute; /* Make sure text is positioned within the parallax container */
+    top: 50%; /* Vertically center the text */
+    left: 50%; /* Horizontally center the text */
+    transform: translate(-50%, -20%); /* Adjust the position to the center */
+    z-index: 1; /* Ensure the text is above the background */
+    color: white; /* Optional: Ensure text is visible if the background is dark */
 }
 
 .picture {
@@ -109,6 +121,8 @@
         grid-row: 1;
         margin-top: 7rem;
         width: fit-content;
+        top: 30%; /* Vertically center the text */
+        left: 25%; /* Horizontally center the text */
     }
 
     .image_wrapper {
