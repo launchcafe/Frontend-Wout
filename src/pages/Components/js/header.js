@@ -22,7 +22,7 @@ export default function Header() {
         { isMobile ? (
         <ParallaxBanner
       layers={[
-        { image: '/bg-small-paralax.png', speed: -20 },
+        { image: '/bg-small-paralax.png', speed: -25 },
       ]}
       className={styles.parallaxbanner}
     >

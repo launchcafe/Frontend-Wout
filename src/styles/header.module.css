@@ -6,7 +6,7 @@
 }
 
 .parallaxbanner {
-    height: 100vh;
+    height: 80vh;
     position: relative; 
 }
 
@@ -17,7 +17,7 @@
     justify-content: end;
     width: 80%;
     margin: 0 auto;
-    height: 80vh;
+    height: 100vh;
     padding: 1rem;
 }
 
