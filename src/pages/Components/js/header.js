@@ -22,8 +22,7 @@ export default function Header() {
         { isMobile ? (
         <ParallaxBanner
       layers={[
-        { image: '/bg-small-paralax.png', speed: -25 },
-      ]}
+        { image: '/bg-small-paralax.png', speed: -20 }]}
       className={styles.parallaxbanner}
     >
       <div className={`${styles.text_container} ${isLoaded ? styles['fade-in'] : ''}`}>
