@@ -4,13 +4,15 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 import useFetch from '@/pages/api/strapi/fetch';
 
 export default function Tournaments() {
-    const [isOpen, setIsOpen] = useState(false);
+    const [isOpen, setIsOpen] = useState();
+
 
         const {data: tournaments, loading, error} = useFetch("https://wout-van-laecke.up.railway.app/api/tournaments");
         if (loading) return <p>Loading...</p>;
         if (!tournaments || tournaments.length === 0) return <p>No data found.</p>;
 
         const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
 
     return (
         <article onClick={() => setIsOpen(!isOpen)}>
@@ -23,14 +25,12 @@ export default function Tournaments() {
         {isOpen && (
        <ul>
 
-{tournaments.map((item)=> {
-     // Extract year from Date
+{tournaments
+.sort((a, b) => new Date(a.Start) - new Date(b.Start))
+.map((item)=> {
      const year = new Date(item.Date).getFullYear();
-         // Extract Start and End dates
           const start = new Date(item.Start);
           const end = new Date(item.End);
-
-     // Format both Start and End Date as DDstart-DDend month YYYY
      const formattedDate = `${String(start.getDate()).padStart(2, '0')}-${String(end.getDate()).padStart(2, '0')} ${monthNames[start.getMonth()]} ${start.getFullYear()}`;
 
     return(<li className= {styles.list_item}>
