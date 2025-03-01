@@ -1,7 +1,9 @@
 .container {
     background-color: var(--background-second);
     padding: 2rem;
-    margin-top: 4rem;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+    margin-top: 5rem;
 }
 
 .form {
@@ -9,6 +11,7 @@
     flex-direction: column;
     gap: 0.5rem;
     padding-top: 2rem;
+
 }
 
 .input {

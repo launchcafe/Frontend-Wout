@@ -60,6 +60,15 @@ export default function SwipeImages() {
           spaceBetween={50}
           modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         >
+
+        <SwiperSlide className={styles.swiperSlide + " " + styles.staticSlide}>
+        <img
+          className={styles.slideImage}z
+          src={"/marcel_wout.jpg"}
+          alt={sortedImages[0]?.Title}
+          onClick={() => setSelectedImage(sortedImages[0]?.Image[0]?.formats?.small?.url)}
+        />
+      </SwiperSlide>
           {sortedImages.map((image) => (
             <SwiperSlide key={image.id} className={styles.swiperSlide}>
              <img
