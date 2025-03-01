@@ -5,7 +5,10 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    padding-bottom: 4rem;
+    padding-top: 5rem;
 }
+
 
 .article {
     display: flex;
@@ -41,6 +44,8 @@
     display: block;
     padding: 0;
     margin: 0;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
 }
 
 .section2_text {

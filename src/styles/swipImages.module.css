@@ -17,6 +17,12 @@
 
 }
 
+.swiper-wapper {
+  display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
 .swiper_button_prev {
     color: var(--background-second);
 }

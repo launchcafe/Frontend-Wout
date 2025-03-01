@@ -1,7 +1,8 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Navigation, Pagination, Mousewheel, Keyboard } from 'swiper/modules';
 import { useEffect, useState } from "react";
 import styles from '@/styles/swipImages.module.css';
 
@@ -51,10 +52,13 @@ export default function SwipeImages() {
     return (
       <div className={styles.swiper_container}>
         <Swiper
-          modules={[Navigation]}
-          navigation
-          spaceBetween={10}
-          slidesPerView={1}
+          cssMode={true}
+          navigation={true}
+          pagination={true}
+          mousewheel={true}
+          keyboard={true}
+          spaceBetween={50}
+          modules={[Navigation, Pagination, Mousewheel, Keyboard]}
         >
           {sortedImages.map((image) => (
             <SwiperSlide key={image.id} className={styles.swiperSlide}>

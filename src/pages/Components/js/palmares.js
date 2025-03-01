@@ -2,8 +2,22 @@ import styles from '@/styles/palmares.module.css'
 import useFetch from '@/pages/api/strapi/fetch';
 import classNames from 'classnames';
 import Tournaments from './tournaments';
+import { useState } from "react";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 export default function Palmares() {
+
+    const [visibleCount, setVisibleCount] = useState(10);
+
+  
+    const handleToggle = () => {
+        if (visibleCount === 10) {
+          setVisibleCount(palmares.length); // Show all items
+        } else {
+          setVisibleCount(10); // Show only first 10 items
+        }
+      };
+
 
     const {data: palmares, loading, error} = useFetch("https://wout-van-laecke.up.railway.app/api/palmares?sort=Date:desc");
     if (loading) return <p>Loading...</p>;
@@ -18,7 +32,7 @@ export default function Palmares() {
                     Palmares
                 </h3>
                 <ul className={styles.list}>
-                    {palmares.map((item)=> {
+                    {palmares.slice(0, visibleCount).map((item)=> {
                             // Extract year from Date
                              const year = new Date(item.Date).getFullYear();
 
@@ -43,8 +57,12 @@ export default function Palmares() {
                             </div>
                         </li>
                    ) })}
+                    <button className={styles.list_button} onClick={handleToggle}>
+                    {visibleCount === 10 
+                        ? <>Zie meer <ChevronDown size={20} /> </> 
+                        : <>Zie minder <ChevronUp size={20} /> </>}
+                </button>
                 </ul>
-               
             </article>
             <hr className={styles.line}/>
             <Tournaments/>
