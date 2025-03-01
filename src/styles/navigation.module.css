@@ -8,11 +8,11 @@
 
 .nav_list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, au1frto);
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
     padding: 1rem;
     padding-bottom: 2rem;
-    gap: 1rem;
+    gap: 1.5rem;
 
 }
 
@@ -70,6 +70,7 @@
         align-items: center;
         padding-bottom: 1rem;
         margin-top: 1rem;
+        row-gap: 0;
     }
 
     .nav_item1, .nav_item2, .nav_item3, .nav_item4, .nav_item5 {

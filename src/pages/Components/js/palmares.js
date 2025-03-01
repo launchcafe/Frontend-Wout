@@ -26,7 +26,7 @@ export default function Palmares() {
 
 
     return (
-        <div className={styles.container}>
+        <section id="results" className={styles.container}>
             <article className={styles.palmares}>
                 <h3>
                     Palmares
@@ -66,6 +66,6 @@ export default function Palmares() {
             </article>
             <hr className={styles.line}/>
             <Tournaments/>
-        </div>
+        </section>
     );
 }

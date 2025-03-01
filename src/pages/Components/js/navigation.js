@@ -12,15 +12,15 @@ export default function Navigation() {
                 <a className={styles.nav_link} href="#about">Wie is Wout?</a>
                 </li>
                 <li className={styles.nav_item3}>
-                <a className={styles.nav_link} href="#pictures"> Foto gallerij</a>
+                <a className={styles.nav_link} href="#results">Resultaten</a>
                 </li>
                 
                 <li className={styles.nav_item4}>
-                    <a className={styles.nav_link} href="#sponsors">Sponsors</a>
+                    <a className={styles.nav_link} href="#pictures">Fotogallerij</a>
                 </li>
                 <li className={styles.nav_item5}>
-                    <button  onClick={() => window.location.href = 'mailto:yves.van.laecke@telenet.be?subject=Contact%20Wout%20Van%20Laecke'}>
-                    Contacteer
+                    <button  onClick={() => window.location.href = '#sponsors'}>
+                    Word sponsor
                     </button>
                 </li>
             </ul>

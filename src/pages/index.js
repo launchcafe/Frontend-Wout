@@ -51,15 +51,15 @@ useEffect(() => {
       </Head>
       <Header/>
         <main>
-          <section id="about" className={styles.section}>
-            <Palmares/>
-            <div className={styles.section_text}>
+          <div className={styles.section}>
+            <Palmares />
+            <section id="about" className={styles.section_text}>
             <TextBlock position={Number(1)}/>
             <article className={styles.article}>
             <TextBlock position={Number(2)}/>
             </article>
-            </div>
-          </section>
+            </section>
+          </div>
           <div className={styles.section_container}>
           <section id="pictures"  ref={sectionRef}  className={`${styles.section2} ${isVisible ? styles["fade-in"] : ""}`}>
             <div className={styles.section2_text}>
