@@ -9,6 +9,7 @@ import { useEffect, useState, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import SwipeImages from "./Components/js/SwipImages.js";
 import TextBlock from "./Components/js/text_block.js";
+import News from "./Components/js/news.js";
 
 export default function Home() {
   const isMobile = useMediaQuery({ maxWidth: 767 });
@@ -52,7 +53,10 @@ useEffect(() => {
       <Header/>
         <main>
           <div className={styles.section}>
+            <div>
             <Palmares />
+            <News />
+            </div>
             <section id="about" className={styles.section_text}>
             <TextBlock position={Number(1)}/>
             <article className={styles.article}>

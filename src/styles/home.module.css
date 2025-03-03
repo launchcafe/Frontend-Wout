@@ -1,12 +1,10 @@
 .section_text {
     width: 80%;
     margin: 0 auto;
-    padding-top: 4rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     padding-bottom: 4rem;
-    padding-top: 6rem;
 }
 
 
@@ -103,6 +101,9 @@
 
 .images {
     width: 100vw;
+}
+.section_text {
+    padding-top: 4rem;
 }
 
 }
