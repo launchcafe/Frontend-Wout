@@ -6,7 +6,7 @@ export default function Navigation() {
         <nav className={styles.nav}>
             <ul className={styles.nav_list}>
                 <li className={styles.nav_item1}>
-                <a className={styles.nav_link} href="#">WVL</a>
+                <a className={styles.nav_link} href="#"><img src="/favicon.ico" className={styles.icon}/></a>
                 </li>
                 <li className={styles.nav_item2}>
                 <a className={styles.nav_link} href="#about">Wie is Wout?</a>

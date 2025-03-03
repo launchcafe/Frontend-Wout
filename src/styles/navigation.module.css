@@ -6,6 +6,9 @@
     top: 0;
 }
 
+.icon {
+    width: 2.5rem;
+}
 .nav_list {
     display: grid;
     grid-template-columns: repeat(3, auto);
