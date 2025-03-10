@@ -10,6 +10,7 @@ import { useMediaQuery } from "react-responsive";
 import SwipeImages from "./Components/js/SwipImages.js";
 import TextBlock from "./Components/js/text_block.js";
 import News from "./Components/js/news.js";
+import Sponsors from "./Components/js/sponsors.js";
 
 export default function Home() {
   const isMobile = useMediaQuery({ maxWidth: 767 });
@@ -85,7 +86,7 @@ useEffect(() => {
           </section>
          {isMobile ? <SwipeImages/> : <ImagesCarousel/> }
           <Form />
-
+          <Sponsors/>
           <Footer/>
           </div>
 

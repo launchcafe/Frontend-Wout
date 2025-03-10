@@ -1,0 +1,18 @@
+.sponsor_grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.sponsor_item {
+  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 50%;
+    position: relative;
+    padding: 2rem;
+}
