@@ -27,7 +27,7 @@ export default function Sponsors() {
               <img
                 src={partner.Logo?.url}
                 alt={partner.Link}
-                style={{ width: "100px", height: "auto" }}
+                style={{ width: "150px", height: "auto" }}
               />
             </div>
                 ))}
