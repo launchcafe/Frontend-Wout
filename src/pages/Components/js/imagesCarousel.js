@@ -78,7 +78,7 @@ export default function PartnerList() {
           <li key={partner.id} className={styles.list}> {/* Ensure a unique key for each list item */}
             <img
               className={styles.slideImage} // Using class from the CSS module
-              src={partner.Image[0]?.formats?.small?.url}
+              src={partner.Image?.[0]?.formats?.small?.url || '/father-son.webp'}
               alt={partner.Title}
               onClick={() => setSelectedImage(partner.Image[0]?.formats?.small?.url)}
             />
