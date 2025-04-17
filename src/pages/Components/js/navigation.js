@@ -19,6 +19,9 @@ export default function Navigation() {
                     <a className={styles.nav_link} href="#pictures">Fotogallerij</a>
                 </li>
                 <li className={styles.nav_item5}>
+                    <a className={styles.nav_link} href="#sponsors">Sponsors</a>
+                </li>
+                <li className={styles.nav_item6}>
                     <button  onClick={() => window.location.href = '#sponsors'}>
                     Word sponsor
                     </button>
