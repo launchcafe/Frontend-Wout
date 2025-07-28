@@ -1,6 +1,6 @@
 .sponsor_grid {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
   width: 50%;
@@ -15,4 +15,10 @@
     max-width: 50%;
     position: relative;
     padding: 2rem;
+}
+
+@media (min-width: 768px) {
+  .sponsor_grid {
+    flex-direction: row;
+  }
 }
