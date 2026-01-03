@@ -19,4 +19,9 @@
     "react-scroll-parallax": "^3.4.5",
     "swiper": "^11.2.4"
   }
+  {
+    "engines": {
+      "node": ">=20.9.0"
+    }
+  }
 }
