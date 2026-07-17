@@ -37,7 +37,7 @@ export default function News() {
 
   return (
       <article className={styles.news_article}>
-      <img className={styles.article_image} src={item.Image.formats?.small?.url} alt={item.Title} />
+      <img className={styles.article_image} src={item.Image?.formats?.small?.url || '/father-son.webp'} alt={item.Title} />
 
         <div>
           <h3>{item.Title}</h3>

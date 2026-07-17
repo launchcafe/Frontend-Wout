@@ -63,19 +63,19 @@ export default function SwipeImages() {
 
         <SwiperSlide className={styles.swiperSlide + " " + styles.staticSlide}>
         <img
-          className={styles.slideImage}z
+          className={styles.slideImage}
           src={"/marcel_wout.jpg"}
           alt={sortedImages[0]?.Title}
-          onClick={() => setSelectedImage(sortedImages[0]?.Image[0]?.formats?.small?.url)}
+          onClick={() => setSelectedImage(sortedImages[0]?.Image?.[0]?.formats?.small?.url)}
         />
       </SwiperSlide>
           {sortedImages.map((image) => (
             <SwiperSlide key={image.id} className={styles.swiperSlide}>
              <img
               className={styles.slideImage} // Using class from the CSS module
-              src={image.Image[0]?.formats?.small?.url}
+              src={image.Image?.[0]?.formats?.small?.url || '/father-son.webp'}
               alt={image.Title}
-              onClick={() => setSelectedImage(image.Image[0]?.formats?.small?.url)}
+              onClick={() => setSelectedImage(image.Image?.[0]?.formats?.small?.url)}
             />
             </SwiperSlide>
           ))}

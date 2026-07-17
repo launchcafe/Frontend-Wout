@@ -80,7 +80,7 @@ export default function PartnerList() {
               className={styles.slideImage} // Using class from the CSS module
               src={partner.Image?.[0]?.formats?.small?.url || '/father-son.webp'}
               alt={partner.Title}
-              onClick={() => setSelectedImage(partner.Image[0]?.formats?.small?.url)}
+              onClick={() => setSelectedImage(partner.Image?.[0]?.formats?.small?.url)}
             />
           </li>
         ))}
