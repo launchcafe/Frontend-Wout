@@ -32,7 +32,7 @@ export default function Header() {
               Wout <br />Van Laecke
             </h1>
             <p className={styles.paragraph}>
-              Bouw jij mee aan de weg naar succes in Brisbane 2032 voor de Wereldkampioenschappen U17 en U20? Klik dan op de onderstaande knop.
+              Bouw jij mee aan de weg naar succes op de Olympische Spelen in Brisbane 2032? Klik dan op de onderstaande knop.
             </p>
             <Button />
     </div>
@@ -67,7 +67,7 @@ export default function Header() {
               Wout <br />Van Laecke
             </h1>
             <p className={styles.paragraph}>
-              Bouw jij mee aan de weg naar succes in Brisbane 2032 voor de Wereldkampioenschappen U17 en U20? Klik dan op de onderstaande knop.
+              Bouw jij mee aan de weg naar succes op de Olympische Spelen in Brisbane 2032? Klik dan op de onderstaande knop.
             </p>
             <Button />
           </div>

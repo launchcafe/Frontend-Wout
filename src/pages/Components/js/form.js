@@ -39,7 +39,7 @@ export default function Form() {
                 Word jij Wout’s  sponsor?
                 </h2>
                 <p>
-                Bouw jij mee aan de weg  naar succes in Brisbane 2032 voor de Wereldkampioenschappen U17 en U20? Vul dan het formulier in. <br/> Wij contacteren u heel spoedig.
+                Bouw jij mee aan de weg  naar succes op de Olympische Spelen in Brisbane 2032? Vul dan het formulier in. <br/> Wij contacteren u heel spoedig.
                 </p>
             </article>
             <form name="feedback" className={styles.form} onSubmit={handleFormSubmit}>
