@@ -4,8 +4,8 @@ node_modules
 .next
 out
 
-# Local Netlify folder
-.netlify
+# Local Vercel folder
+.vercel
 
 .env
 .DS_Store
