@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../../../Desktop/Frontend-Wout/src/pages/_app.js"],"sourcesContent":["import \"@/styles/globals.css\";\n\nexport default function App({ Component, pageProps }) {\n  return   <Component {...pageProps} />;\n}\n"],"names":[],"mappings":"yIAEe,SAAS,EAAI,WAAE,CAAS,WAAE,CAAS,CAAE,EAClD,MAAS,CAAA,EAAA,EAAA,GAAA,EAAC,EAAA,CAAW,GAAG,CAAS,EACnC"}

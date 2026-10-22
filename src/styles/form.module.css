@@ -27,6 +27,15 @@
     margin-bottom: 1rem;
 }
 
+.embed {
+    width: 100%;
+    border: none;
+    border-radius: 1rem;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+}
+
 @media (min-width: 768px) {
     .container {
         display: flex;
@@ -58,6 +67,9 @@
     }
     .input {
         font-size: 16px;
+        width: 30vw;
+    }
+    .embed {
         width: 30vw;
     }
 }

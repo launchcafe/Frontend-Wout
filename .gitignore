@@ -1,6 +1,12 @@
 node_modules
 
-# Local Netlify folder
+# Next.js build output
+.next
+out
+
+# Local Netlify/Vercel folders
 .netlify
+.vercel
 
 .env
+.DS_Store
