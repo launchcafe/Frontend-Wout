@@ -4,7 +4,7 @@ import Button from './button';
 
 // Tally-formulier (tally.so) met de velden e-mail, bedrijf en telefoonnummer.
 // Het ID staat in de deel-link van het formulier: https://tally.so/r/<ID>
-const TALLY_FORM_ID = '';
+const TALLY_FORM_ID = '1WADOQ';
 
 export default function Form() {
     return(
@@ -22,7 +22,7 @@ export default function Form() {
                 <>
                 <iframe
                     className={styles.embed}
-                    data-tally-src={`https://tally.so/embed/${TALLY_FORM_ID}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1`}
+                    data-tally-src={`https://tally.so/embed/${TALLY_FORM_ID}?alignLeft=1&hideTitle=1&dynamicHeight=1`}
                     loading="lazy"
                     height="300"
                     frameBorder="0"
