@@ -1,16 +1,16 @@
 import Head from "next/head";
-import Header from "./Components/js/header.js";
-import Palmares from "./Components/js/palmares.js";
+import Header from "@/components/header.js";
+import Palmares from "@/components/palmares.js";
 import styles from './../styles/home.module.css';
-import ImagesCarousel from "./Components/js/imagesCarousel.js";
-import Form from "./Components/js/form.js";
-import Footer from "./Components/js/footer.js";
+import ImagesCarousel from "@/components/imagesCarousel.js";
+import Form from "@/components/form.js";
+import Footer from "@/components/footer.js";
 import { useEffect, useState, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
-import SwipeImages from "./Components/js/SwipImages.js";
-import TextBlock from "./Components/js/text_block.js";
-import News from "./Components/js/news.js";
-import Sponsors from "./Components/js/sponsors.js";
+import SwipeImages from "@/components/SwipImages.js";
+import TextBlock from "@/components/text_block.js";
+import News from "@/components/news.js";
+import Sponsors from "@/components/sponsors.js";
 
 export default function Home() {
   const isMobile = useMediaQuery({ maxWidth: 767 });
@@ -25,9 +25,7 @@ useEffect(() => {
   const observer = new IntersectionObserver(
     (entries) => {
       const entry = entries[0];
-      console.log("Observing:", entry); // Debugging output
       if (entry.isIntersecting) {
-        console.log("Section is now visible! 🎉");
         setIsVisible(true);
         observer.disconnect(); // Stop observing after it becomes visible
       }

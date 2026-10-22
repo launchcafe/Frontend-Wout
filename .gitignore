@@ -1,6 +1,11 @@
 node_modules
 
+# Next.js build output
+.next
+out
+
 # Local Netlify folder
 .netlify
 
 .env
+.DS_Store
